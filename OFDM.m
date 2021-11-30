@@ -1,7 +1,10 @@
 % Simulation of OFDM transmitter and receiver with 
 % sub-carriers = 64, 
 % cyclic prefix = 6, 
-% channel length = 3 
+% channel length = 3, 
+% no of block = 10^4,
+% mean square value =1,
+% power = 1,
 % for BPSK as the modulation technique
 
 %%
@@ -9,13 +12,19 @@ clc;
 clear;
 close all;
 
-N = 64; % number of subcarriers
-CP = 6; % number of cyclic prefix
-L = 3; % channel length
+% number of subcarriers
+N = input("Enter number of sub-carriers: ");
+% number of cyclic prefix
+CP = input("Enter number of cyclic prefix: ");
+% channel length
+L = input("Enter length of channel: ");
 SNR_dB_range = -5:5:55; % SNR in dB
-no_of_block = 1e4; % number of block
-mean_sq=1; % mean square value
-pow=1; % power of bpsk signal
+% number of block
+no_of_block = input("Enter number of blocks: ");
+% mean square value
+mean_sq = input("Enter mean square value: "); 
+% power of bpsk signal
+pow = ("Enter power of BPSK: ");
 BER=[]; % empty array
 
 for SNR_dB = SNR_dB_range
@@ -60,5 +69,3 @@ xlabel('SNR_d_B');
 ylabel('BER');
 legend('BER BPSK in OFDM')
 grid on
-
-%%
