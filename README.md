@@ -8,4 +8,7 @@
   - number of blocks 
 - SNR has been increased from 5 dB to 55 dB with a 5 dB step size. 
 
-This is mostly a learning exercise for me, for practicing writing and verifying RTL code
+# Result
+- BER vs SNR
+[BER vs SNR](OFDM.png)
+![](OFDM.png)
