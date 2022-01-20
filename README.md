@@ -9,5 +9,4 @@
 - SNR has been increased from 5 dB to 55 dB with a 5 dB step size. 
 
 # Result
-BER vs SNR
 ![](OFDM.png)
